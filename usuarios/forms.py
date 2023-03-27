@@ -38,7 +38,7 @@ class CadastroForms(forms.Form):
         )
     )
 
-    email=forms.EmailField(
+    email_1=forms.EmailField(
         label='Email',
         required=True,
         max_length=100,
@@ -46,6 +46,18 @@ class CadastroForms(forms.Form):
             attrs={
             "class": "form-control",
             'placeholder': 'Ex.: joao@exemplo.com'
+            }
+        )
+    )
+    
+    email_2=forms.EmailField(
+        label='Confirme o Email',
+        required=True,
+        max_length=100,
+        widget=forms.EmailInput(
+            attrs={
+            "class": "form-control",
+            'placeholder': 'Ex.: Confirme o e-mail digitado anteriormente'
             }
         )
     )
