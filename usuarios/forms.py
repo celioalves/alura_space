@@ -38,7 +38,7 @@ class CadastroForms(forms.Form):
         )
     )
 
-    email_1=forms.EmailField(
+    email=forms.EmailField(
         label='Email',
         required=True,
         max_length=100,
@@ -50,17 +50,17 @@ class CadastroForms(forms.Form):
         )
     )
     
-    email_2=forms.EmailField(
-        label='Confirme o Email',
-        required=True,
-        max_length=100,
-        widget=forms.EmailInput(
-            attrs={
-            "class": "form-control",
-            'placeholder': 'Ex.: Confirme o e-mail digitado anteriormente'
-            }
-        )
-    )
+    # email_2=forms.EmailField(
+    #     label='Confirme o Email',
+    #     required=True,
+    #     max_length=100,
+    #     widget=forms.EmailInput(
+    #         attrs={
+    #         "class": "form-control",
+    #         'placeholder': 'Ex.: Confirme o e-mail digitado anteriormente'
+    #         }
+    #     )
+    # )
 
     senha_1=forms.CharField(
         label='Senha',
